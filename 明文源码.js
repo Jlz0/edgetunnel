@@ -1,5 +1,5 @@
 import { connect } from 'cloudflare:sockets';
-let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
+let userID = '';
 let proxyIP = '';
 if (!isValidUUID(userID)) {
 	throw new Error('uuid is not valid');
@@ -446,3 +446,4 @@ clash-meta
 ################################################################
 `;
 }
+
