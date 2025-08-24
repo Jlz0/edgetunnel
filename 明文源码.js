@@ -382,7 +382,7 @@ async function handleUDPOutBound(webSocket, vlessResponseHeader, log) {
 	});
 	transformStream.readable.pipeTo(new WritableStream({
 		async write(chunk) {
-			const resp = await fetch('https:
+			const resp = await fetch('https://1.1.1.1/dns-query',
 				{
 					method: 'POST',
 					headers: {
@@ -417,7 +417,7 @@ function getVLESSConfig(userID, hostName) {
 	const protocol = "vless";
 	const vlessMain = 
 	`${protocol}` + 
-	`:
+	`://${userID}@${hostName}:443`+
 	`?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
 	return `
 ################################################################
@@ -446,4 +446,3 @@ clash-meta
 ################################################################
 `;
 }
-
