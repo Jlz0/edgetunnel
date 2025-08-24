@@ -1,4 +1,4 @@
-// <!--GAMFC-->version base on commit f1c99e4ee05db6d1bd4bafb90e1f595ddfa41a65, time is 2025-02-20 13:00:21 UTC<!--GAMFC-END-->.
+
 // @ts-ignore
 import { connect } from 'cloudflare:sockets';
 
@@ -633,4 +633,5 @@ clash-meta
 ################################################################
 `;
 }
+
 
